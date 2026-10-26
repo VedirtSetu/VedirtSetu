@@ -1,0 +1,8 @@
+{
+  "name": "VedirtSetu - B2B Distributor & Retailer Ordering System",
+  "description": "Universal mobile-first PWA B2B wholesale and retail daily ordering system. Eliminates manual phone calls for FMCG, Bakery, Groceries, Beverages, Dairy, and Wholesale suppliers with real-time orders, cutoff management, consolidated demand, shop-wise billing, and Hindi support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

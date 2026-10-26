@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "SubscriptionPayment": {
+      "title": "SubscriptionPayment",
+      "description": "Records distributor subscription fee payments and approvals",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique payment identifier" },
+        "distributor_id": { "type": "number", "description": "Distributor ID" },
+        "amount": { "type": "number", "description": "Payment amount in INR" },
+        "payment_date": { "type": "string", "description": "Date of transaction" },
+        "payment_mode": { "type": "string", "description": "Payment method (UPI, Bank Transfer, Cash)" },
+        "reference_no": { "type": "string", "description": "UTR / Transaction reference number" },
+        "status": { "type": "string", "description": "Payment status (pending, approved, rejected)" },
+        "synced_at": { "type": "string", "description": "ISO timestamp of sync" }
+      },
+      "required": ["amount", "status"]
+    },
+    "SubscriptionPlan": {
+      "title": "SubscriptionPlan",
+      "description": "SaaS subscription pricing tiers for distributors",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Plan key or ID" },
+        "name": { "type": "string", "description": "Plan title" },
+        "price": { "type": "number", "description": "Fee in INR" },
+        "duration_days": { "type": "number", "description": "Validity period in days" }
+      },
+      "required": ["name", "price"]
+    },
+    "Distributor": {
+      "title": "Distributor",
+      "description": "Wholesale distributor profile and credentials",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Distributor numeric ID" },
+        "business_name": { "type": "string", "description": "Name of firm or enterprise" },
+        "owner_name": { "type": "string", "description": "Name of proprietor" },
+        "mobile": { "type": "string", "description": "10-digit mobile number" },
+        "active_status": { "type": "number", "description": "1 for active, 0 for inactive" },
+        "subscription_status": { "type": "string", "description": "active, suspended, expired, deleted" },
+        "is_deleted": { "type": "number", "description": "Soft delete flag (0 or 1)" }
+      },
+      "required": ["business_name", "mobile"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Master account profile for authentication and role dispatch",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "User display name" },
+        "mobile": { "type": "string", "description": "Mobile number" },
+        "role": { "type": "string", "description": "Role: superadmin, admin, retailer" },
+        "active_status": { "type": "number", "description": "1 for active, 0 for blocked" },
+        "distributor_id": { "type": "number", "description": "Associated distributor if admin/staff" },
+        "shop_id": { "type": "number", "description": "Associated shop if retailer" }
+      },
+      "required": ["mobile", "role"]
+    },
+    "Shop": {
+      "title": "Shop",
+      "description": "Retail store customer profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Shop ID" },
+        "shop_name": { "type": "string", "description": "Store name" },
+        "shop_code": { "type": "string", "description": "Unique shop code (e.g. SH101)" },
+        "mobile": { "type": "string", "description": "Contact number" },
+        "distributor_id": { "type": "number", "description": "Owner distributor ID" },
+        "active_status": { "type": "number", "description": "1 for active, 0 for inactive" },
+        "is_deleted": { "type": "number", "description": "Soft delete flag" }
+      },
+      "required": ["shop_name", "distributor_id"]
+    },
+    "Product": {
+      "title": "Product",
+      "description": "Product catalog item in inventory",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Numeric product ID" },
+        "name": { "type": "string", "description": "Product name" },
+        "distributor_id": { "type": "number", "description": "Distributor ID" },
+        "wholesale_price": { "type": "number", "description": "Unit wholesale price" },
+        "active_status": { "type": "number", "description": "1 for active, 0 for archived" }
+      },
+      "required": ["name", "wholesale_price", "distributor_id"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "B2B wholesale purchase order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Internal order ID" },
+        "order_number": { "type": "string", "description": "Human-readable order code" },
+        "distributor_id": { "type": "number", "description": "Target distributor ID" },
+        "shop_id": { "type": "number", "description": "Ordering shop ID" },
+        "total_amount": { "type": "number", "description": "Total order amount" },
+        "status": { "type": "string", "description": "Order status (Pending, Confirmed, Delivered, Cancelled)" }
+      },
+      "required": ["order_number", "distributor_id", "shop_id"]
+    },
+    "Payment": {
+      "title": "Payment",
+      "description": "Retailer payment ledger transaction",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number", "description": "Transaction ID" },
+        "shop_id": { "type": "number", "description": "Retailer shop ID" },
+        "distributor_id": { "type": "number", "description": "Distributor ID" },
+        "amount": { "type": "number", "description": "Amount credited in INR" },
+        "payment_date": { "type": "string", "description": "Transaction date" },
+        "status": { "type": "string", "description": "Status" }
+      },
+      "required": ["shop_id", "distributor_id", "amount"]
+    },
+    "Setting": {
+      "title": "Setting",
+      "description": "Application and distributor specific settings",
+      "type": "object",
+      "properties": {
+        "key": { "type": "string", "description": "Setting key" },
+        "value": { "type": "string", "description": "Setting value or JSON payload" }
+      }
+    },
+    "Test": {
+      "title": "Test",
+      "description": "Connectivity test ping documents",
+      "type": "object",
+      "properties": {
+        "ok": { "type": "boolean", "description": "Success flag" }
+      }
+    }
+  },
+  "firestore": {
+    "/subscription_payments/{paymentId}": {
+      "schema": "SubscriptionPayment",
+      "description": "Subscription payments submitted by distributors"
+    },
+    "/subscription_plans/{planId}": {
+      "schema": "SubscriptionPlan",
+      "description": "Available subscription plan definitions"
+    },
+    "/distributors/{distributorId}": {
+      "schema": "Distributor",
+      "description": "Distributor business documents"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile mapping documents"
+    },
+    "/shops/{shopId}": {
+      "schema": "Shop",
+      "description": "Retail store documents"
+    },
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Product catalog documents"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Wholesale purchase order documents"
+    },
+    "/payments/{paymentId}": {
+      "schema": "Payment",
+      "description": "Retailer payment records"
+    },
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "App and distributor configuration settings"
+    },
+    "/test/{testId}": {
+      "schema": "Test",
+      "description": "Diagnostic connection test collection"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------- */
+/* CLEAN THERMAL & A4 PRINT STYLES FOR DELIVERY SLIPS & INVOICES  */
+/* ------------------------------------------------------------- */
+@media print {
+  /* Hide navigation bars, headers, sidebars, buttons, input controls and interactive elements */
+  nav,
+  header,
+  aside,
+  button,
+  input,
+  select,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure print-only values are shown */
+  .print\:block {
+    display: block !important;
+  }
+  .print\:inline-block {
+    display: inline-block !important;
+  }
+
+  /* Clean white paper background for crisp thermal & standard printing */
+  body,
+  main,
+  #root {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Unclip modal and scrollable containers during print */
+  .fixed {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+  .max-h-\[85vh\],
+  .max-h-72,
+  .overflow-y-auto {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* High-contrast readable tables for thermal receipts */
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6px 8px !important;
+    font-size: 11pt !important;
+    color: #000000 !important;
+  }
+
+  /* Prevent page-breaks in between order rows */
+  tr {
+    page-break-inside: avoid !important;
+  }
+}

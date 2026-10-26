@@ -1,0 +1,55 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Subscription payments audit collection
+    match /subscription_payments/{paymentId} {
+      allow read, write: if true;
+    }
+
+    // Subscription plans configuration
+    match /subscription_plans/{planId} {
+      allow read, write: if true;
+    }
+
+    // Distributors collection
+    match /distributors/{distributorId} {
+      allow read, write: if true;
+    }
+
+    // Master user accounts collection
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Retailer shops collection
+    match /shops/{shopId} {
+      allow read, write: if true;
+    }
+
+    // Products / catalog inventory
+    match /products/{productId} {
+      allow read, write: if true;
+    }
+
+    // Orders collection
+    match /orders/{orderId} {
+      allow read, write: if true;
+    }
+
+    // Retailer payments collection
+    match /payments/{paymentId} {
+      allow read, write: if true;
+    }
+
+    // App & distributor settings
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    // Connectivity test collection
+    match /test/{testId} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,886 @@
+export type Language = 'hi' | 'en';
+
+export const translations = {
+  hi: {
+    // App Branding
+    appName: 'वेदिरतसेतु',
+    tagline: 'थोक वितरक एवं रिटेलर दैनिक ऑर्डर व वितरण प्रणाली',
+    appBadge: 'B2B थोक',
+    networkDesc: 'थोक वितरक व रिटेल दुकानदार B2B ऑर्डर नेटवर्क',
+
+    // Authentication & Login
+    loginTitle: 'प्रवेश करें',
+    loginSubtitle: 'दुकानदार या वितरक के रूप में लॉगिन करें',
+    mobileNumber: 'मोबाइल नंबर',
+    emailOrMobile: 'मोबाइल नंबर या ईमेल',
+    password: 'पासवर्ड',
+    otp: 'ओटीपी',
+    sendOtp: 'ओटीपी प्राप्त करें',
+    submitLogin: 'लॉगिन करें',
+    demoAccounts: 'त्वरित डेमो खाते (1-क्लिक टेस्ट)',
+    distributorAdmin: 'वितरक (एडमिन)',
+    shopkeeperRetailer: 'दुकानदार',
+    logout: 'लॉगआउट',
+    enterWithAccount: 'प्रवेश करें',
+    demoHint: 'परीक्षण हेतु किसी भी खाते पर क्लिक करके सीधे प्रवेश करें:',
+    loginWithOtp: 'ओटीपी से लॉगिन करें',
+    loginWithPassword: 'पासवर्ड से लॉगिन करें',
+    demoPasswordHint: 'वितरक पासवर्ड: admin123 • दुकानदार पासवर्ड: 1234',
+    phonePlaceholder: '9876543210 या 9811122233',
+    passPlaceholder: 'पासवर्ड दर्ज करें',
+    otpPlaceholder: '1234',
+    enterMobileFirst: 'कृपया पहले मोबाइल नंबर दर्ज करें',
+    loginFailed: 'लॉगिन विफल रहा। कृपया विवरण जांचें।',
+
+    // PWA & Connectivity
+    installApp: 'ऐप इंस्टॉल करें',
+    installIos: 'आईफोन में जोड़ें',
+    iosGuideTitle: 'आईफोन / आईपैड पर इंस्टॉल करें',
+    iosStep1: '1. सफारी ब्राउज़र में नीचे दिए शेयर बटन पर टैप करें।',
+    iosStep2: '2. नीचे स्क्रॉल करके "होम स्क्रीन में जोड़ें" चुनें।',
+    gotIt: 'समझ गया',
+    offlineBanner: 'इंटरनेट बंद है — ऑफ़लाइन मोड में हैं',
+
+    // Notifications
+    notifications: 'सूचनाएं',
+    markAllRead: 'सभी को पढ़ा हुआ मार्क करें',
+    noNotifications: 'कोई नई सूचना नहीं है',
+
+    // Shopkeeper Dashboard
+    todayOrderStatus: 'आज का ऑर्डर',
+    cutoffNotice: 'दैनिक ऑर्डर कटऑफ समय',
+    repeatLastOrder: 'पिछला ऑर्डर दोहराएं',
+    repeatDesc: '1-क्लिक में पिछले ऑर्डर की वही सामग्री और मात्रा आज दोहराएं',
+    newOrder: 'नया ऑर्डर दें',
+    myOrders: 'मेरे पुराने ऑर्डर',
+    shopProfile: 'दुकान प्रोफाइल',
+    lastOrderSummary: 'पिछले ऑर्डर का विवरण',
+    recentOrders: 'हाल के ऑर्डर',
+    viewAll: 'सभी देखें',
+    outstandingAmount: 'बकाया राशि (खाता)',
+    noOrdersToday: 'आज का कोई ऑर्डर जमा नहीं हुआ है',
+    noOrdersTodaySub: 'आज की अंतिम समय सीमा रात {cutoff} बजे तक है। कृपया समय पर ऑर्डर दें।',
+    orderSubmittedBadge: 'ऑर्डर दर्ज हो गया',
+    orderCutoffReminder: 'कटऑफ समय से पहले आप कभी भी ऑर्डर बदल या रद्द कर सकते हैं।',
+    loadDefaultQty: 'डिफ़ॉल्ट मात्रा लोड करें',
+    orderCatalogSub: 'दुकान हेतु किराना, एफएमसीजी, बेकरी, पेय, डेयरी व थोक सामग्री का ऑर्डर दें',
+    orderedItems: 'ऑर्डर की गई सामग्री:',
+    noOrdersFound: 'कोई ऑर्डर इतिहास नहीं मिला',
+
+    // Order status labels (Pure Hindi)
+    Pending: 'लंबित',
+    Confirmed: 'स्वीकृत',
+    Packed: 'पैक किया गया',
+    'Partially Delivered': 'आंशिक डिलीवर',
+    Delivered: 'डिलीवर हो गया',
+    Cancelled: 'रद्द',
+    'Not Ordered': 'ऑर्डर नहीं दिया',
+
+    // Cutoff labels
+    on_time: 'समय पर',
+    late: 'विलंबित',
+    exempt: 'छूट प्राप्त',
+
+    // Catalog & Ordering
+    productCatalog: 'उत्पाद सूची',
+    quantity: 'मात्रा',
+    rate: 'दर',
+    totalAmount: 'कुल राशि',
+    subtotal: 'उप-योग',
+    notes: 'डिलीवरी निर्देश (नोट्स)',
+    notesPlaceholder: 'उदा. सुबह 6:00 बजे तक दुकान पर पहुंचाएं...',
+    saveAsRegular: 'इसे मेरा नियमित डिफ़ॉल्ट ऑर्डर बनाएं',
+    reviewOrder: 'ऑर्डर की समीक्षा करें',
+    submitDailyOrder: 'ऑर्डर जमा करें',
+    cancelOrder: 'ऑर्डर रद्द करें',
+    editOrder: 'ऑर्डर बदलें',
+    orderNumber: 'ऑर्डर संख्या',
+    orderDate: 'ऑर्डर तिथि',
+    unit: 'इकाई',
+    minQty: 'न्यूनतम मात्रा',
+    inStock: 'स्टॉक में उपलब्ध',
+    outOfStock: 'अनुपलब्ध',
+    itemsSelected: 'इकाइयां चुनी गईं',
+    confirmCancelOrder: 'क्या आप सचमुच इस ऑर्डर को रद्द करना चाहते हैं?',
+    confirmCancelOrderDesc: 'क्या आप सचमुच इस ऑर्डर को रद्द करना चाहते हैं? यह क्रिया वापस नहीं ली जा सकती।',
+    orderAlreadyPlaced: 'आज का ऑर्डर पहले से दर्ज है!',
+    addToOrder: 'ऑर्डर में जोड़ें',
+    updateInOrder: 'मात्रा अद्यतन करें',
+    addedToOrder: 'जोड़ दिया गया!',
+    inOrder: 'ऑर्डर में',
+    clearDraft: 'ड्राफ्ट खाली करें',
+    viewDraft: 'ऑर्डर ड्राफ्ट देखें',
+    items: 'प्रकार',
+    noProductsInDraft: 'ऑर्डर ड्राफ्ट में कोई उत्पाद नहीं है',
+    noRegularSaved: 'कोई नियमित डिफ़ॉल्ट ऑर्डर सुरक्षित नहीं है',
+    orderUpdatedSuccess: 'ऑर्डर सफलतापूर्वक अद्यतन हो गया!',
+    orderPlacedSuccess: 'ऑर्डर सफलतापूर्वक दर्ज हो गया!',
+    orderCancelledSuccess: 'ऑर्डर सफलतापूर्वक रद्द कर दिया गया!',
+    confirmClearDraftTitle: 'ड्राफ्ट खाली करें',
+    confirmClearDraftDesc: 'क्या आप ड्राफ्ट में जोड़े गए सभी उत्पादों को हटाना चाहते हैं?',
+    confirmYes: 'हाँ, जारी रखें',
+    confirmNo: 'नहीं, वापस जाएं',
+
+    // Distributor Navigation
+    dashboard: 'डैशबोर्ड',
+    todaysOrders: 'आज के ऑर्डर',
+    consolidatedDemand: 'कुल मांग',
+    shops: 'दुकानें',
+    products: 'उत्पाद सूची',
+    deliveryStatus: 'डिलीवरी शीट',
+    paymentsLedger: 'भुगतान व खाता',
+    reports: 'रिपोर्ट्स',
+    settings: 'सेटिंग्स',
+
+    // Distributor Dashboard Metrics
+    totalActiveShops: 'कुल सक्रिय दुकानें',
+    totalOrdersToday: 'आज के कुल ऑर्डर',
+    pendingOrders: 'लंबित ऑर्डर',
+    confirmedOrders: 'स्वीकृत ऑर्डर',
+    deliveredOrders: 'डिलीवर किए गए ऑर्डर',
+    totalOrderValue: 'कुल ऑर्डर मूल्य',
+    unsubmittedShops: 'जिन दुकानों ने आज ऑर्डर नहीं दिया',
+    sendReminder: 'ऑर्डर याददिहानी भेजें',
+    remindAll: 'सभी को याद दिलाएं',
+    lateOrders: 'कटऑफ के बाद प्राप्त ऑर्डर',
+    demandSnapshot: 'दैनिक उत्पाद मांग स्नैपशॉट',
+    viewFullDemand: 'पूर्ण समेकित मांग देखें →',
+    networkSize: 'दुकानों का नेटवर्क',
+    dailyBilling: 'दैनिक कुल बिलिंग',
+
+    // Consolidated Demand
+    demandTableTitle: 'उत्पाद अनुसार समेकित मांग',
+    orderedQuantity: 'कुल मांग',
+    deliveredQuantity: 'डिलीवर हुआ',
+    pendingQuantity: 'शेष मांग',
+    copySummary: 'व्हाट्सएप समरी कॉपी करें',
+    exportCsv: 'सीएसवी डाउनलोड करें',
+    exportExcel: 'एक्सेल निर्यात',
+    printDemand: 'मांग पत्र प्रिंट करें',
+    copiedSuccess: 'सफलतापूर्वक कॉपी हो गया! अब व्हाट्सएप में पेस्ट करें।',
+    grandTotal: 'समेकित कुल योग',
+    shopsOrderedCount: 'कुल दुकानें जिन्होंने ऑर्डर दिया:',
+    estimatedValue: 'अनुमानित कुल राशि',
+
+    // Shops Management
+    shopManagement: 'दुकान प्रबंधन',
+    addNewShop: '+ नई दुकान जोड़ें',
+    shopName: 'दुकान का नाम',
+    shopCode: 'दुकान कोड',
+    ownerName: 'मालिक का नाम',
+    phone: 'मोबाइल नंबर',
+    address: 'पूरा पता',
+    area: 'क्षेत्र',
+    route: 'रूट',
+    activeStatus: 'सक्रिय स्थिति',
+    todayStatus: 'आज की स्थिति',
+    outstandingLedger: 'बकाया खाता',
+    ledgerBtn: 'खाता लेज़र',
+    editShop: 'दुकान बदलें',
+    totalShopsCount: 'कुल दुकानें',
+    active: 'सक्रिय',
+    inactive: 'निष्क्रिय',
+    activate: 'सक्रिय करें',
+    deactivate: 'निष्क्रिय करें',
+    deleteShop: 'दुकान हटाएं',
+    removeShopkeeper: 'दुकानदार हटाएं',
+    confirmDeleteShopTitle: 'दुकानदार हटाने की पुष्टि',
+    confirmDeleteShopDesc: 'क्या आप सचमुच इस दुकानदार को हटाना चाहते हैं? दुकान निष्क्रिय हो जाएगी, लेकिन पुराना ऑर्डर इतिहास व बकाया खाता सुरक्षित रहेगा।',
+    confirmDeleteShopBtn: 'हाँ, दुकानदार हटाएं',
+    shopDeletedSuccess: 'दुकानदार सफलतापूर्वक हटाया गया!',
+
+    // Products Management
+    productsManagement: 'उत्पाद सूची एवं दरें',
+    addNewProduct: '+ नया उत्पाद जोड़ें',
+    productNameHindi: 'हिन्दी नाम',
+    productNameEnglish: 'अंग्रेजी नाम',
+    category: 'श्रेणी',
+    priceRate: 'दर / मूल्य (₹)',
+    minimumQuantity: 'न्यूनतम मात्रा',
+    stockAvailable: 'स्टॉक उपलब्ध है',
+    editProduct: 'संपादित करें',
+    deleteProduct: 'उत्पाद हटाएं',
+
+    // Delivery Sheet
+    deliveryRouteSheet: 'डिलीवरी रूट शीट',
+    deliverySubtext: 'डिलीवरी वाहन ड्राइवर और डिलीवरी बॉय के लिए रूट अनुसार शीट',
+    printDeliverySheet: 'डिलीवरी शीट प्रिंट करें',
+    deliverySignature: 'दुकानदार हस्ताक्षर / स्थिति',
+    driverName: 'ड्राइवर का नाम',
+    vehicleNumber: 'वाहन संख्या',
+    crateCount: 'क्रेट संख्या',
+
+    // Payments & Ledger
+    paymentsTitle: 'भुगतान एवं लेज़र',
+    paymentsSubtext: 'नकद, यूपीआई और बैंक ट्रांसफर द्वारा प्राप्त भुगतानों का लेखा',
+    recordPayment: '+ भुगतान दर्ज करें',
+    receiptNumber: 'रसीद संख्या',
+    paymentMode: 'भुगतान माध्यम',
+    paymentAmount: 'राशि',
+    paymentNotes: 'नोट्स / संदर्भ',
+    totalBilled: 'कुल बिलिंग',
+    totalPaid: 'कुल प्राप्त भुगतान',
+    balanceDue: 'शेष बकाया राशि',
+    transactionsHistory: 'लेनदेन इतिहास',
+
+    // Reports
+    reportsTitle: 'रिपोर्ट्स एवं विश्लेषण',
+    fulfillmentRate: 'आज के ऑर्डर पूर्ति दर',
+    avgOrderValue: 'दैनिक औसत ऑर्डर मूल्य',
+    perShopAvg: 'प्रति दुकान औसत',
+    ordersAfterCutoff: 'कटऑफ के पश्चात प्राप्त',
+    topOrderedProducts: 'सर्वाधिक बिकने वाले उत्पाद',
+    topPurchasingShops: 'शीर्ष खरीददार दुकानें',
+
+    // Settings
+    settingsTitle: 'सिस्टम एवं कटऑफ सेटिंग्स',
+    dailyCutoffSetting: 'दैनिक ऑर्डर कटऑफ समय:',
+    cutoffSettingSubtext: 'डिफ़ॉल्ट समय: 20:00 (रात 8:00 बजे)। इसके बाद आने वाले ऑर्डर को विलंबित मार्क किया जाएगा।',
+    allowLateOrdersCheckbox: 'कटऑफ के बाद भी विलंबित ऑर्डर स्वीकार करें',
+    allowLateOrdersSubtext: 'यदि अनचेक करेंगे तो कटऑफ के बाद दुकानदार ऑर्डर जमा नहीं कर पाएंगे।',
+    distributorOrgName: 'वितरक संस्था का नाम:',
+    distributorMobileSetting: 'वितरक मोबाइल नंबर:',
+    saveSettings: 'सेटिंग्स सुरक्षित करें',
+    auditLogsTitle: 'ऑडिट लॉग (परिवर्तनों का विवरण)',
+
+    // Actions & Common
+    loading: 'लोड हो रहा है...',
+    save: 'सुरक्षित करें',
+    close: 'बंद करें',
+    cancel: 'रद्द करें',
+    search: 'दुकान का नाम, कोड, फोन खोजें...',
+    allRoutes: 'सभी रूट',
+    allAreas: 'सभी क्षेत्र',
+    allStatuses: 'सभी स्थितियां',
+    allCategories: 'सभी श्रेणियां',
+    date: 'दिनांक',
+    actions: 'क्रियाएं',
+    viewDetails: 'विवरण देखें',
+    success: 'सफलता',
+    error: 'त्रुटि',
+    back: 'वापस',
+    rupeeSymbol: '₹',
+    today: 'आज',
+    manualOrder: '+ नया ऑर्डर (मैन्युअल)',
+    changeStatus: 'स्थिति परिवर्तित करें:',
+    statusChangeModalTitle: 'ऑर्डर की स्थिति बदलें',
+    selectNewStatus: 'नई स्थिति चुनें:',
+    reasonForChange: 'परिवर्तन का कारण:',
+    auditReasonPrompt: 'कारण दर्ज करें:',
+    changeStatusSuccess: 'स्थिति परिवर्तित की गई',
+    orderSavedSuccess: 'ऑर्डर सुरक्षित हो गया!',
+    paymentSavedSuccess: 'भुगतान सफलतापूर्वक दर्ज हुआ!',
+    shopSavedSuccess: 'दुकान सुरक्षित की गई!',
+    productSavedSuccess: 'उत्पाद सुरक्षित किया गया!',
+    settingsSavedSuccess: 'सेटिंग्स सुरक्षित की गईं!',
+    delete: 'हटाएं',
+    remove: 'हटाएं',
+    print: 'प्रिंट करें',
+    filterByRoute: 'रूट अनुसार फ़िल्टर',
+    filterByStatus: 'स्थिति अनुसार फ़िल्टर',
+
+    // Super Admin / Multi-Distributor Platform SaaS
+    superAdminDashboard: 'कंपनी सुपर एडमिन डैशबोर्ड',
+    platformOverview: 'प्लेटफ़ॉर्म ओवरव्यू एवं SaaS मेट्रिक्स',
+    distributorManagement: 'वितरक प्रबंधन (Distributors)',
+    addNewDistributor: '+ नया वितरक जोड़ें',
+    editDistributor: 'वितरक विवरण व प्लान बदलें',
+    distributorName: 'वितरक / कंपनी का नाम',
+    distributorOwner: 'संचालक / मालिक',
+    cityTerritory: 'शहर / कार्यक्षेत्र',
+    plan: 'सब्सक्रिप्शन प्लान',
+    monthlyFee: 'मासिक शुल्क',
+    subscriptionStatus: 'सब्सक्रिप्शन स्थिति',
+    renewalDate: 'नवीनीकरण दिनांक',
+    maxShops: 'अधिकतम दुकान सीमा',
+    associatedShops: 'संबद्ध दुकानें',
+    todayOrders: 'आज के ऑर्डर',
+    viewDistributorWorkspace: 'वितरक पोर्टल देखें (Inspect Workspace)',
+    returnToSuperAdmin: 'सुपर एडमिन डैशबोर्ड पर वापस जाएं',
+    inspectingDistributorBanner: 'सुपर एडमिन मोड: आप इस वितरक का लाइव वर्कस्पेस देख रहे हैं',
+    recordSubscriptionPayment: 'सब्सक्रिप्शन फीस दर्ज करें',
+    renewSubscription: 'सब्सक्रिप्शन नवीनीकरण',
+    confirmDeleteDistributor: 'वितरक हटाने की पुष्टि',
+    confirmDeleteDistributorDesc: 'क्या आप सचमुच इस वितरक को हटाना चाहते हैं? वितरक खाता निष्क्रिय हो जाएगा, लेकिन ऐतिहासिक ऑर्डर व खाता रिकॉर्ड सुरक्षित रहेंगे।',
+    confirmDeleteDistributorBtn: 'हाँ, वितरक हटाएं',
+    distributorSavedSuccess: 'वितरक सफलतापूर्वक सुरक्षित किया गया!',
+    distributorDeletedSuccess: 'वितरक सफलतापूर्वक हटाया गया!',
+    subscriptionPaymentSuccess: 'सब्सक्रिप्शन भुगतान दर्ज किया गया व वैधता बढ़ाई गई!',
+    subscriptionPaymentsHistory: 'सब्सक्रिप्शन बिलिंग इतिहास',
+    mrr: 'मासिक आवर्ती राजस्व (MRR)',
+    totalDistributors: 'कुल वितरक',
+    activeDistributors: 'सक्रिय वितरक',
+    trialDistributors: 'ट्रायल वितरक',
+    expiredDistributors: 'अवधि समाप्त / निलंबित',
+    totalNetworkShops: 'नेटवर्क में कुल दुकानें',
+    totalPlatformOrders: 'आज के कुल ऑर्डर',
+    totalPlatformSales: 'आज का कुल कारोबार',
+    renewalsDueThisWeek: 'इस सप्ताह नवीनीकरण देय',
+    planStarter: 'स्टार्टर (Starter)',
+    planPro: 'ग्रोथ प्रो (Growth Pro)',
+    planEnterprise: 'एंटरप्राइज (Enterprise)',
+    suspendDistributor: 'खाता निलंबित करें',
+    reactivateDistributor: 'खाता पुनः सक्रिय करें',
+    daysLeft: 'दिन शेष',
+    overdueByDays: 'दिन अतिदेय',
+    subscriptionHistory: 'सब्सक्रिप्शन भुगतान रसीदें',
+    monitorDistributors: 'वितरक व दुकान निगरानी',
+    monitor: 'निगरानी (Monitor)',
+    monitoringConsole: 'लाइव मॉनिटरिंग कंसोल',
+    cardView: 'कार्ड दृश्य (Grid)',
+    tableView: 'निगरानी तालिका (Table)',
+    statusActive: 'सक्रिय',
+    statusSuspended: 'निलंबित',
+    shopCapacity: 'दुकान क्षमता उपयोग',
+    totalShopBalance: 'दुकानों की कुल बाज़ार उधारी',
+    allRegisteredShops: 'वितरक से जुड़ी पंजीकृत दुकानें',
+    noShopsFound: 'इस वितरक के अंतर्गत अभी कोई दुकान पंजीकृत नहीं है।',
+    orderToday: 'आज का ऑर्डर',
+    lastOrder: 'अंतिम ऑर्डर',
+    routeTerritory: 'डिलीवरी रूट',
+    quickStatus: 'त्वरित स्थिति',
+    distributorDetails: 'वितरक पूर्ण विवरण',
+    capacityLimit: 'प्लान सीमा',
+    openDistributorPortal: 'लाइव वितरक पोर्टल में प्रवेश करें',
+    statusUpdatedSuccess: 'वितरक स्थिति सफलतापूर्वक अपडेट हुई!',
+  },
+  en: {
+    // App Branding
+    appName: 'VedirtSetu',
+    tagline: 'Universal B2B Wholesale & Daily Order Distribution Platform',
+    appBadge: 'B2B Wholesale',
+    networkDesc: 'Wholesaler & Retailer B2B Ordering Network',
+
+    // Authentication & Login
+    loginTitle: 'Sign In',
+    loginSubtitle: 'Sign in to access your shop or distributor console',
+    mobileNumber: 'Mobile Number',
+    emailOrMobile: 'Mobile Number or Email',
+    password: 'Password',
+    otp: 'OTP',
+    sendOtp: 'Get OTP',
+    submitLogin: 'Login',
+    demoAccounts: 'Quick Demo Accounts (1-Click Test)',
+    distributorAdmin: 'Distributor (Admin)',
+    shopkeeperRetailer: 'Shopkeeper',
+    logout: 'Logout',
+    enterWithAccount: 'Enter',
+    demoHint: 'Click any account below to instantly log in for testing:',
+    loginWithOtp: 'Login with OTP',
+    loginWithPassword: 'Login with Password',
+    demoPasswordHint: 'Distributor password: admin123 • Shopkeeper password: 1234',
+    phonePlaceholder: '9876543210 or 9811122233',
+    passPlaceholder: 'Enter password',
+    otpPlaceholder: '1234',
+    enterMobileFirst: 'Please enter mobile number first',
+    loginFailed: 'Login failed. Please verify credentials.',
+
+    // PWA & Connectivity
+    installApp: 'Install App',
+    installIos: 'Install on iOS',
+    iosGuideTitle: 'Install on iPhone / iPad',
+    iosStep1: '1. Tap the Share button in Safari toolbar.',
+    iosStep2: '2. Scroll down and tap "Add to Home Screen".',
+    gotIt: 'Got it',
+    offlineBanner: 'Internet offline — using cached data',
+
+    // Notifications
+    notifications: 'Notifications',
+    markAllRead: 'Mark all as read',
+    noNotifications: 'No notifications',
+
+    // Shopkeeper Dashboard
+    todayOrderStatus: "Today's Order",
+    cutoffNotice: 'Daily Order Cutoff Time',
+    repeatLastOrder: 'Repeat Previous Order',
+    repeatDesc: 'Repeat exact items and quantities from your previous order in one tap',
+    newOrder: 'Place New Order',
+    myOrders: 'My Orders',
+    shopProfile: 'Shop Profile',
+    lastOrderSummary: 'Last Order Summary',
+    recentOrders: 'Recent Orders',
+    viewAll: 'View All',
+    outstandingAmount: 'Outstanding Balance',
+    noOrdersToday: 'No order submitted yet for today',
+    noOrdersTodaySub: 'Daily order cutoff time is {cutoff}. Please submit your order on time.',
+    orderSubmittedBadge: 'Order Submitted',
+    orderCutoffReminder: 'You can edit or cancel this order anytime before cutoff.',
+    loadDefaultQty: 'Load Default Quantity',
+    orderCatalogSub: 'Order daily wholesale supplies, FMCG, groceries, bakery, beverages & more',
+    orderedItems: 'Ordered Items:',
+    noOrdersFound: 'No order history found',
+
+    // Order status labels (Pure English)
+    Pending: 'Pending',
+    Confirmed: 'Confirmed',
+    Packed: 'Packed',
+    'Partially Delivered': 'Partially Delivered',
+    Delivered: 'Delivered',
+    Cancelled: 'Cancelled',
+    'Not Ordered': 'Not Ordered',
+
+    // Cutoff labels
+    on_time: 'On Time',
+    late: 'Late Order',
+    exempt: 'Exempt',
+
+    // Catalog & Ordering
+    productCatalog: 'Product Catalogue',
+    quantity: 'Quantity',
+    rate: 'Rate',
+    totalAmount: 'Total Amount',
+    subtotal: 'Subtotal',
+    notes: 'Delivery Instructions (Notes)',
+    notesPlaceholder: 'e.g. Please deliver at shop by 6:00 AM...',
+    saveAsRegular: 'Save as my regular default order',
+    reviewOrder: 'Review Order',
+    submitDailyOrder: 'Submit Daily Order',
+    cancelOrder: 'Cancel Order',
+    editOrder: 'Edit Order',
+    orderNumber: 'Order Number',
+    orderDate: 'Order Date',
+    unit: 'Unit',
+    minQty: 'Minimum Quantity',
+    inStock: 'In Stock',
+    outOfStock: 'Out of Stock',
+    itemsSelected: 'items selected',
+    confirmCancelOrder: 'Are you sure you want to cancel this order?',
+    confirmCancelOrderDesc: 'Are you sure you want to cancel this order? This action cannot be undone.',
+    orderAlreadyPlaced: 'Order already placed for today!',
+    addToOrder: 'Add to Order',
+    updateInOrder: 'Update Quantity',
+    addedToOrder: 'Added!',
+    inOrder: 'In Order',
+    clearDraft: 'Clear Draft',
+    viewDraft: 'View Order Draft',
+    items: 'items',
+    noProductsInDraft: 'No products in order draft',
+    noRegularSaved: 'No regular default order saved yet',
+    orderUpdatedSuccess: 'Order updated successfully!',
+    orderPlacedSuccess: 'Order placed successfully!',
+    orderCancelledSuccess: 'Order cancelled successfully!',
+    confirmClearDraftTitle: 'Clear Order Draft',
+    confirmClearDraftDesc: 'Do you want to remove all items currently in your order draft?',
+    confirmYes: 'Yes, Proceed',
+    confirmNo: 'No, Keep Draft',
+
+    // Distributor Navigation
+    dashboard: 'Dashboard',
+    todaysOrders: "Today's Orders",
+    consolidatedDemand: 'Consolidated Demand',
+    shops: 'Shops',
+    products: 'Products',
+    deliveryStatus: 'Delivery Sheet',
+    paymentsLedger: 'Payments & Ledger',
+    reports: 'Reports',
+    settings: 'Settings',
+
+    // Distributor Dashboard Metrics
+    totalActiveShops: 'Total Active Shops',
+    totalOrdersToday: "Total Orders Today",
+    pendingOrders: 'Pending Orders',
+    confirmedOrders: 'Confirmed Orders',
+    deliveredOrders: 'Delivered Orders',
+    totalOrderValue: 'Total Order Value',
+    unsubmittedShops: 'Shops Not Ordered Today',
+    sendReminder: 'Send Order Reminder',
+    remindAll: 'Remind All Pending',
+    lateOrders: 'Orders After Cutoff',
+    demandSnapshot: 'Daily Product Demand Snapshot',
+    viewFullDemand: 'View Full Consolidated Demand →',
+    networkSize: 'retail shops network',
+    dailyBilling: 'total daily billing',
+
+    // Consolidated Demand
+    demandTableTitle: 'Product-Wise Consolidated Demand',
+    orderedQuantity: 'Total Ordered',
+    deliveredQuantity: 'Delivered',
+    pendingQuantity: 'Pending Demand',
+    copySummary: 'Copy WhatsApp Summary',
+    exportCsv: 'Export CSV',
+    exportExcel: 'Export Excel',
+    printDemand: 'Print Demand Sheet',
+    copiedSuccess: 'Copied to clipboard! Ready to paste into WhatsApp.',
+    grandTotal: 'Grand Total',
+    shopsOrderedCount: 'Total Shops Ordered:',
+    estimatedValue: 'Estimated Total Value',
+
+    // Shops Management
+    shopManagement: 'Shop Management',
+    addNewShop: '+ Add New Shop',
+    shopName: 'Shop Name',
+    shopCode: 'Shop Code',
+    ownerName: 'Owner Name',
+    phone: 'Mobile Number',
+    address: 'Full Address',
+    area: 'Area',
+    route: 'Route',
+    activeStatus: 'Active Status',
+    todayStatus: "Today's Status",
+    outstandingLedger: 'Outstanding Balance',
+    ledgerBtn: 'Ledger',
+    editShop: 'Edit Shop',
+    totalShopsCount: 'total shops',
+    active: 'Active',
+    inactive: 'Inactive',
+    activate: 'Activate',
+    deactivate: 'Deactivate',
+    deleteShop: 'Delete Shop',
+    removeShopkeeper: 'Remove Shopkeeper',
+    confirmDeleteShopTitle: 'Confirm Remove Shopkeeper',
+    confirmDeleteShopDesc: 'Are you sure you want to remove this shopkeeper? Their shop login will be deactivated while historical orders and ledger balances remain safely preserved.',
+    confirmDeleteShopBtn: 'Yes, Remove Shopkeeper',
+    shopDeletedSuccess: 'Shopkeeper removed successfully!',
+
+    // Products Management
+    productsManagement: 'Product Catalogue & Rates',
+    addNewProduct: '+ Add New Product',
+    productNameHindi: 'Hindi Name',
+    productNameEnglish: 'English Name',
+    category: 'Category',
+    priceRate: 'Price / Rate (₹)',
+    minimumQuantity: 'Minimum Quantity',
+    stockAvailable: 'Stock Available',
+    editProduct: 'Edit Product',
+    deleteProduct: 'Delete Product',
+
+    // Delivery Sheet
+    deliveryRouteSheet: 'Delivery Route Sheet',
+    deliverySubtext: 'Route-wise delivery sheet for drivers and dispatch crew',
+    printDeliverySheet: 'Print Delivery Sheet',
+    deliverySignature: 'Shopkeeper Signature / Status',
+    driverName: 'Driver Name',
+    vehicleNumber: 'Vehicle Number',
+    crateCount: 'Crate Count',
+
+    // Payments & Ledger
+    paymentsTitle: 'Payments & Ledger',
+    paymentsSubtext: 'Ledger of payments collected via Cash, UPI and Bank Transfer',
+    recordPayment: '+ Record Payment',
+    receiptNumber: 'Receipt #',
+    paymentMode: 'Payment Mode',
+    paymentAmount: 'Amount',
+    paymentNotes: 'Notes / Reference',
+    totalBilled: 'Total Billed',
+    totalPaid: 'Total Paid',
+    balanceDue: 'Net Balance Due',
+    transactionsHistory: 'Transaction History',
+
+    // Reports
+    reportsTitle: 'Reports & Analytics',
+    fulfillmentRate: 'Order Fulfillment Rate',
+    avgOrderValue: 'Average Order Value',
+    perShopAvg: 'per shop average',
+    ordersAfterCutoff: 'Orders after cutoff',
+    topOrderedProducts: 'Top Ordered Products',
+    topPurchasingShops: 'Top Purchasing Shops',
+
+    // Settings
+    settingsTitle: 'System & Cutoff Settings',
+    dailyCutoffSetting: 'Daily Order Cutoff Time:',
+    cutoffSettingSubtext: 'Default time: 20:00 (8:00 PM). Orders received after this will be marked late.',
+    allowLateOrdersCheckbox: 'Accept late orders after cutoff time',
+    allowLateOrdersSubtext: 'If unchecked, shopkeepers cannot submit orders after cutoff.',
+    distributorOrgName: 'Distributor Business Name:',
+    distributorMobileSetting: 'Distributor Mobile Number:',
+    saveSettings: 'Save Settings',
+    auditLogsTitle: 'Audit Logs (Change History)',
+
+    // Actions & Common
+    loading: 'Loading...',
+    save: 'Save',
+    close: 'Close',
+    cancel: 'Cancel',
+    search: 'Search shop name, code, mobile...',
+    allRoutes: 'All Routes',
+    allAreas: 'All Areas',
+    allStatuses: 'All Statuses',
+    allCategories: 'All Categories',
+    date: 'Date',
+    actions: 'Actions',
+    viewDetails: 'View Details',
+    success: 'Success',
+    error: 'Error',
+    back: 'Back',
+    rupeeSymbol: '₹',
+    today: 'Today',
+    manualOrder: '+ New Order (Manual)',
+    changeStatus: 'Change Status:',
+    statusChangeModalTitle: 'Change Order Status',
+    selectNewStatus: 'Select New Status:',
+    reasonForChange: 'Reason for Change:',
+    auditReasonPrompt: 'Enter reason:',
+    changeStatusSuccess: 'Status updated',
+    orderSavedSuccess: 'Order placed successfully!',
+    paymentSavedSuccess: 'Payment recorded successfully!',
+    shopSavedSuccess: 'Shop saved successfully!',
+    productSavedSuccess: 'Product saved successfully!',
+    settingsSavedSuccess: 'Settings saved successfully!',
+    delete: 'Delete',
+    remove: 'Remove',
+    print: 'Print',
+    filterByRoute: 'Filter by Route',
+    filterByStatus: 'Filter by Status',
+
+    // Super Admin / Multi-Distributor Platform SaaS
+    superAdminDashboard: 'Platform Super Admin Dashboard',
+    platformOverview: 'Platform Overview & SaaS Metrics',
+    distributorManagement: 'Distributors Management',
+    addNewDistributor: '+ Add New Distributor',
+    editDistributor: 'Edit Distributor & Plan',
+    distributorName: 'Distributor / Agency Name',
+    distributorOwner: 'Owner / Contact Person',
+    cityTerritory: 'City / Region',
+    plan: 'Subscription Plan',
+    monthlyFee: 'Monthly Fee',
+    subscriptionStatus: 'Subscription Status',
+    renewalDate: 'Renewal Date',
+    maxShops: 'Max Shop Limit',
+    associatedShops: 'Associated Shops',
+    todayOrders: "Today's Orders",
+    viewDistributorWorkspace: 'Inspect Distributor Workspace',
+    returnToSuperAdmin: 'Return to Super Admin',
+    inspectingDistributorBanner: 'Super Admin Mode: Viewing Distributor Live Workspace',
+    recordSubscriptionPayment: 'Record Subscription Payment',
+    renewSubscription: 'Renew Subscription',
+    confirmDeleteDistributor: 'Confirm Delete Distributor',
+    confirmDeleteDistributorDesc: 'Are you sure you want to deactivate this distributor? Their login will be disabled while historical orders and ledger records remain safely preserved.',
+    confirmDeleteDistributorBtn: 'Yes, Delete Distributor',
+    distributorSavedSuccess: 'Distributor saved successfully!',
+    distributorDeletedSuccess: 'Distributor removed successfully!',
+    subscriptionPaymentSuccess: 'Subscription payment recorded & renewal extended!',
+    subscriptionPaymentsHistory: 'Subscription Billing History',
+    mrr: 'Monthly Recurring Revenue (MRR)',
+    totalDistributors: 'Total Distributors',
+    activeDistributors: 'Active Distributors',
+    trialDistributors: 'Trial Distributors',
+    expiredDistributors: 'Expired / Suspended',
+    totalNetworkShops: 'Total Network Shops',
+    totalPlatformOrders: "Total Orders Today",
+    totalPlatformSales: "Total Platform Sales Today",
+    renewalsDueThisWeek: 'Renewals Due This Week',
+    planStarter: 'Starter',
+    planPro: 'Growth Pro',
+    planEnterprise: 'Enterprise',
+    suspendDistributor: 'Suspend Account',
+    reactivateDistributor: 'Reactivate Account',
+    daysLeft: 'days left',
+    overdueByDays: 'days overdue',
+    subscriptionHistory: 'Subscription Receipts',
+    monitorDistributors: 'Distributor & Shop Monitor',
+    monitor: 'Monitor & Shops',
+    monitoringConsole: 'Live Monitoring Console',
+    cardView: 'Cards Grid',
+    tableView: 'Monitoring Table',
+    statusActive: 'Active',
+    statusSuspended: 'Suspended',
+    shopCapacity: 'Shop Capacity Usage',
+    totalShopBalance: 'Total Shop Ledger Dues',
+    allRegisteredShops: 'Registered Shopkeepers',
+    noShopsFound: 'No shops registered under this distributor yet.',
+    orderToday: "Today's Order",
+    lastOrder: 'Last Order',
+    routeTerritory: 'Delivery Route',
+    quickStatus: 'Quick Status',
+    distributorDetails: 'Distributor Profile',
+    capacityLimit: 'Plan Limit',
+    openDistributorPortal: 'Open Live Distributor Workspace',
+    statusUpdatedSuccess: 'Distributor status updated successfully!',
+  },
+};
+
+export function getSubscriptionStatusName(status: string | undefined | null, lang: Language): string {
+  if (!status) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    active: { hi: 'सक्रिय (Active)', en: 'Active' },
+    trial: { hi: 'ट्रायल (Trial)', en: 'Trial' },
+    expired: { hi: 'अवधि समाप्त (Expired)', en: 'Expired' },
+    suspended: { hi: 'निलंबित (Suspended)', en: 'Suspended' },
+  };
+  if (map[status]) return map[status][lang];
+  return status;
+}
+
+// -------------------------------------------------------------
+// HELPER FUNCTIONS FOR 100% A-TO-Z TRANSLATION
+// -------------------------------------------------------------
+
+export function getRouteName(route: string | undefined | null, lang: Language): string {
+  if (!route) return '';
+  if (lang === 'hi') {
+    if (route.includes('North') || route.includes('उत्तर')) return 'रूट 1 - उत्तर';
+    if (route.includes('Central') || route.includes('मध्य')) return 'रूट 2 - मध्य';
+    if (route.includes('South') || route.includes('दक्षिण')) return 'रूट 3 - दक्षिण';
+    return route;
+  }
+  if (route.includes('उत्तर') || route.includes('North')) return 'Route 1 - North';
+  if (route.includes('मध्य') || route.includes('Central')) return 'Route 2 - Central';
+  if (route.includes('दक्षिण') || route.includes('South')) return 'Route 3 - South';
+  return route;
+}
+
+export function getAreaName(area: string | undefined | null, lang: Language): string {
+  if (!area) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    'Civil Lines': { hi: 'सिविल लाइन्स', en: 'Civil Lines' },
+    'Model Town': { hi: 'मॉडल टाउन', en: 'Model Town' },
+    'Gandhi Nagar': { hi: 'गांधी नगर', en: 'Gandhi Nagar' },
+    'Subhash Chowk': { hi: 'सुभाष चौक', en: 'Subhash Chowk' },
+    'Railway Road': { hi: 'रेलवे रोड', en: 'Railway Road' },
+    'सिविल लाइन्स': { hi: 'सिविल लाइन्स', en: 'Civil Lines' },
+    'मॉडल टाउन': { hi: 'मॉडल टाउन', en: 'Model Town' },
+    'गांधी नगर': { hi: 'गांधी नगर', en: 'Gandhi Nagar' },
+    'सुभाष चौक': { hi: 'सुभाष चौक', en: 'Subhash Chowk' },
+    'रेलवे रोड': { hi: 'रेलवे रोड', en: 'Railway Road' },
+  };
+  return map[area]?.[lang] || area;
+}
+
+export function getShopName(shop: { shop_name?: string } | string | undefined | null, lang: Language): string {
+  const name = typeof shop === 'string' ? shop : shop?.shop_name || '';
+  if (!name) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    'Sharma Dairy & Sweets': { hi: 'शर्मा डेयरी एवं स्वीट्स', en: 'Sharma Dairy & Sweets' },
+    'Krishna Milk Point': { hi: 'कृष्णा मिल्क पॉइंट', en: 'Krishna Milk Point' },
+    'Gupta General Store': { hi: 'गुप्ता जनरल स्टोर', en: 'Gupta General Store' },
+    'Radhe Daily Needs': { hi: 'राधे डेली नीड्स', en: 'Radhe Daily Needs' },
+    'Apna Milk Center': { hi: 'अपना मिल्क सेंटर', en: 'Apna Milk Center' },
+    'शर्मा डेयरी एवं स्वीट्स': { hi: 'शर्मा डेयरी एवं स्वीट्स', en: 'Sharma Dairy & Sweets' },
+    'कृष्णा मिल्क पॉइंट': { hi: 'कृष्णा मिल्क पॉइंट', en: 'Krishna Milk Point' },
+    'गुप्ता जनरल स्टोर': { hi: 'गुप्ता जनरल स्टोर', en: 'Gupta General Store' },
+    'राधे डेली नीड्स': { hi: 'राधे डेली नीड्स', en: 'Radhe Daily Needs' },
+    'अपना मिल्क सेंटर': { hi: 'अपना मिल्क सेंटर', en: 'Apna Milk Center' },
+  };
+  return map[name]?.[lang] || name;
+}
+
+export function getUnitName(unit: string | undefined | null, lang: Language): string {
+  if (!unit) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    packet: { hi: 'पैकेट', en: 'packet' },
+    packets: { hi: 'पैकेट', en: 'packets' },
+    pkt: { hi: 'पैकेट', en: 'pkt' },
+    box: { hi: 'पेटी / बॉक्स', en: 'box' },
+    boxes: { hi: 'पेटी / बॉक्स', en: 'boxes' },
+    carton: { hi: 'कार्टन', en: 'carton' },
+    cartons: { hi: 'कार्टन', en: 'cartons' },
+    bottle: { hi: 'बोतल', en: 'bottle' },
+    bottles: { hi: 'बोतल', en: 'bottles' },
+    can: { hi: 'कैन', en: 'can' },
+    cans: { hi: 'कैन', en: 'cans' },
+    bag: { hi: 'बोरी / बैग', en: 'bag' },
+    bags: { hi: 'बोरी / बैग', en: 'bags' },
+    bori: { hi: 'बोरी', en: 'bag' },
+    piece: { hi: 'पीस', en: 'piece' },
+    pieces: { hi: 'पीस', en: 'pieces' },
+    pcs: { hi: 'पीस / नग', en: 'pcs' },
+    dozen: { hi: 'दर्जन', en: 'dozen' },
+    kg: { hi: 'किलो', en: 'kg' },
+    gm: { hi: 'ग्राम', en: 'gm' },
+    litre: { hi: 'लीटर', en: 'litre' },
+    ltr: { hi: 'लीटर', en: 'ltr' },
+    cup: { hi: 'कप', en: 'cup' },
+    jar: { hi: 'जार', en: 'jar' },
+    jars: { hi: 'जार', en: 'jars' },
+    crate: { hi: 'क्रेट', en: 'crate' },
+    crates: { hi: 'क्रेट', en: 'crates' },
+    strip: { hi: 'स्ट्रिप / पत्ता', en: 'strip' },
+    strips: { hi: 'स्ट्रिप / पत्ता', en: 'strips' },
+    bundle: { hi: 'बंडल', en: 'bundle' },
+    bundles: { hi: 'बंडल', en: 'bundles' },
+    roll: { hi: 'रोल', en: 'roll' },
+    rolls: { hi: 'रोल', en: 'rolls' },
+    set: { hi: 'सेट', en: 'set' },
+    tin: { hi: 'टिन / पीपा', en: 'tin' },
+  };
+  const key = unit.toLowerCase().trim();
+  if (map[key]) return map[key][lang];
+  return unit;
+}
+
+export function getCategoryName(category: string | undefined | null, lang: Language): string {
+  if (!category) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    All: { hi: 'सभी उत्पाद', en: 'All Products' },
+    FMCG: { hi: 'किराना व एफएमसीजी', en: 'Grocery & FMCG' },
+    Grocery: { hi: 'किराना व खाद्यान्न', en: 'Groceries' },
+    Bakery: { hi: 'बेकरी व स्नैक्स', en: 'Bakery & Snacks' },
+    Beverages: { hi: 'पेय पदार्थ व मिनरल वॉटर', en: 'Beverages & Water' },
+    Dairy: { hi: 'दूध व डेयरी', en: 'Dairy & Milk' },
+    FruitsVeg: { hi: 'फल व ताजी सब्जियां', en: 'Fruits & Vegetables' },
+    Hardware: { hi: 'हार्डवेयर व इलेक्ट्रिकल', en: 'Hardware & Electrical' },
+    Pharma: { hi: 'दवा व हेल्थकेयर', en: 'Pharmaceuticals' },
+    Stationery: { hi: 'स्टेशनरी व बुक्स', en: 'Stationery & Books' },
+    Sweets: { hi: 'मिठाई व नमकीन', en: 'Sweets & Confectionery' },
+    Packaging: { hi: 'पैकेजिंग व डिस्पोजेबल', en: 'Packaging & Disposables' },
+    General: { hi: 'सामान्य थोक सामग्री', en: 'General Wholesale' },
+    Milk: { hi: 'दूध', en: 'Milk' },
+    Curd: { hi: 'दही', en: 'Curd' },
+    Chaach: { hi: 'छाछ / मट्ठा', en: 'Buttermilk' },
+    Lassi: { hi: 'लस्सी', en: 'Lassi' },
+    Paneer: { hi: 'पनीर', en: 'Paneer' },
+    Ghee: { hi: 'देसी घी', en: 'Ghee' },
+    Butter: { hi: 'मक्खन', en: 'Butter' },
+    'डेयरी': { hi: 'दूध व डेयरी', en: 'Dairy & Milk' },
+    'बेकरी': { hi: 'बेकरी व स्नैक्स', en: 'Bakery & Snacks' },
+    'राशन': { hi: 'किराना व खाद्यान्न', en: 'Groceries' },
+    'किराना': { hi: 'किराना व एफएमसीजी', en: 'Grocery & FMCG' },
+  };
+  if (map[category]) return map[category][lang];
+  return category;
+}
+
+export function getStatusName(status: string | undefined | null, lang: Language): string {
+  if (!status) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    Pending: { hi: 'लंबित', en: 'Pending' },
+    Confirmed: { hi: 'स्वीकृत', en: 'Confirmed' },
+    Packed: { hi: 'पैक किया गया', en: 'Packed' },
+    'Partially Delivered': { hi: 'आंशिक डिलीवर', en: 'Partially Delivered' },
+    Delivered: { hi: 'डिलीवर हो गया', en: 'Delivered' },
+    Cancelled: { hi: 'रद्द', en: 'Cancelled' },
+    'Not Ordered': { hi: 'ऑर्डर नहीं दिया', en: 'Not Ordered' },
+  };
+  if (map[status]) return map[status][lang];
+  return status;
+}
+
+export function getCutoffStatusName(cutoff: string | undefined | null, lang: Language): string {
+  if (!cutoff) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    on_time: { hi: 'समय पर', en: 'On Time' },
+    late: { hi: 'विलंबित', en: 'Late Order' },
+    exempt: { hi: 'छूट प्राप्त', en: 'Exempt' },
+  };
+  if (map[cutoff]) return map[cutoff][lang];
+  return cutoff;
+}
+
+export function getPaymentModeName(mode: string | undefined | null, lang: Language): string {
+  if (!mode) return '';
+  const map: Record<string, { hi: string; en: string }> = {
+    Cash: { hi: 'नकद', en: 'Cash' },
+    UPI: { hi: 'यूपीआई', en: 'UPI' },
+    Cheque: { hi: 'चेक', en: 'Cheque' },
+    'Bank Transfer': { hi: 'बैंक ट्रांसफर', en: 'Bank Transfer' },
+  };
+  if (map[mode]) return map[mode][lang];
+  return mode;
+}
+
+export function getProductName(product: { name_hindi?: string; name_english?: string } | undefined | null, lang: Language): string {
+  if (!product) return '';
+  if (lang === 'hi') {
+    return product.name_hindi || product.name_english || '';
+  }
+  return product.name_english || product.name_hindi || '';
+}
+
+export function formatCurrency(amount: number | undefined | null): string {
+  const val = Number(amount) || 0;
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(val);
+}
